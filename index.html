@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELOA | Hotel & Resort</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">VELOA</div>
+    <nav>
+      <a href="#home" class="active"><i class="fas fa-house"></i> Home</a>
+      <a href="#status"><i class="fas fa-signal"></i> Status</a>
+      <a href="#maintenance"><i class="fas fa-tools"></i> Maintenance</a>
+      <a href="#shifts"><i class="fas fa-clock"></i> Shifts</a>
+    </nav>
+    <a href="#status" class="btn btn-header">Check Status</a>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content animate-up">
+      <h1>Escape to Luxury</h1>
+      <p>Experience the ultimate Roblox resort getaway. Relax, enjoy, and feel at home.</p>
+      <a href="#status" class="btn btn-primary">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <section id="status" class="section animate-up">
+    <h2>Game Status</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>VELOA | Hotel & Resort <span class="badge">Roblox Game</span></h3>
+        <p>Status: <span class="status offline"><i class="fas fa-circle"></i> Offline</span></p>
+      </div>
+      <div class="card">
+        <h3>VELOA | Service Center <span class="badge">Roblox Game</span></h3>
+        <p>Status: <span class="status offline"><i class="fas fa-circle"></i> Offline</span></p>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <p>Rework Progress: 10%</p>
+      <div class="progress-bar">
+        <div class="progress-water">
+          <div class="wave"></div>
+          <span class="island">🌴</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAINTENANCE -->
+  <section id="maintenance" class="section animate-up">
+    <h2>Maintenance Status</h2>
+    <div class="card maintenance-card">
+      <div class="maintenance-status">
+        <span class="status-text">Currently in Maintenance</span>
+        <p>Game: VELOA | Hotel & Resort</p>
+      </div>
+      <ul>
+        <li>Modern interiors update</li>
+        <li>New service systems</li>
+        <li>Improved gameplay mechanics</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SHIFTS -->
+  <section id="shifts" class="section animate-up">
+    <h2>Weekly Shift Times</h2>
+    <div class="card">
+      <div id="shift-status">
+        <p>Next shift starts in: <span id="countdown">Loading...</span></p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Evening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Friday</td>
+            <td>10:00 - 11:00 AM <span class="shift-status" id="fri-morning">Soon</span></td>
+            <td>8:00 - 9:00 PM <span class="shift-status" id="fri-evening">Soon</span></td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>10:00 - 11:00 AM <span class="shift-status" id="sat-morning">Soon</span></td>
+            <td>8:00 - 9:00 PM <span class="shift-status" id="sat-evening">Soon</span></td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>10:00 - 11:00 AM <span class="shift-status" id="sun-morning">Soon</span></td>
+            <td>8:00 - 9:00 PM <span class="shift-status" id="sun-evening">Soon</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 VELOA Hotel & Resort. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
