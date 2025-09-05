@@ -1,16 +1,6 @@
-// Scroll Animation
-const elements = document.querySelectorAll('.animate-up');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.2 });
-
 elements.forEach(el => observer.observe(el));
 
-// Shift Countdown + Status
+// Shifts mit Countdown
 function updateShiftStatus() {
   const now = new Date();
   const shifts = [
@@ -39,8 +29,8 @@ function updateShiftStatus() {
       if (!nextShiftTime || diff < nextShiftTime.diff) {
         nextShiftTime = { date: shiftDate, diff: diff };
       }
-    } else if (diff > -3600000) { // within 1 hour after start
-      statusEl.className = "shift-status progress";
+    } else if (diff > -3600000) {
+      statusEl.className = "shift-status progress blink";
       statusEl.textContent = "In Progress";
     } else {
       statusEl.className = "shift-status ended";
@@ -50,14 +40,17 @@ function updateShiftStatus() {
 
   if (nextShiftTime) {
     const countdownEl = document.getElementById("countdown");
-    const hours = Math.floor(nextShiftTime.diff / (1000 * 60 * 60));
-    const mins = Math.floor((nextShiftTime.diff % (1000 * 60 * 60)) / (1000 * 60));
-    countdownEl.textContent = `${hours}h ${mins}m`;
+    const diff = nextShiftTime.date - now;
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+    countdownEl.textContent = `${hours}h ${mins}m ${secs}s`;
   }
 }
 
-setInterval(updateShiftStatus, 60000);
+setInterval(updateShiftStatus, 1000);
 updateShiftStatus();
+
 
 
 
